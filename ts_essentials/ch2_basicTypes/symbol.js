@@ -18,4 +18,4 @@ obj[sym];
 // 아래와 같이 사용할 경우 error
 obj["sym"];
 console.log(obj[sym]);
-console.log(obj["sym"]);
+console.log(obj["sym"]); // undefined
