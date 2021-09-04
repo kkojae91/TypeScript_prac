@@ -16,7 +16,7 @@
   // tsconfig/bases <= github 참고!!
   // npm install --save -D @tsconfig/deno
   // "extends": "@tsconfig/deno/tsconfig.json", 을 추가해서 사용할 수 있다. 자세한 내용은 깃헙 참고!
-  "extends": "./base.json",
+  // "extends": "",
   // "compileOnSave": true/false (default false)
   // 문서를 저장하면 compile 할래?!
   "compileOnSave": true,
@@ -51,8 +51,15 @@
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+
+    // type와 typeRoots를 모두 설정하는 경우는 없다.
+    // 아무 설정하지 않을 경우 -> node_modules/@types 라는 모든 경로를 찾아서 사용
+    // typeRoots를 사용하면, []배열안에 들어있는 경로들 아래서만 가지고 온다.
+    // types를 사용하면, []배열안의 모듈, 혹은 ./node_modules/@types/ 안의 모듈 이름에서 찾아온다.
+    // types에 [] 빈 배열을 선언하면, 이 시스탬을 사용하지 않겠다는 의미
     // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "resolveJsonModule": true,                        /* Enable importing .json files */
     // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
