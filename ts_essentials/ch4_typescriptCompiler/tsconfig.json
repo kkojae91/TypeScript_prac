@@ -1,4 +1,11 @@
 {
+  // extends 확장시킬 tsconfig.json의 경로 설정을 해주면 된다.
+  // 현재 파일에 설정되어 있지 않은 옵션을 불러올 수 있다.
+  // ts 2.1이상 사용 가능
+  // tsconfig/bases <= github 참고!!
+  // npm install --save -D @tsconfig/deno
+  // "extends": "@tsconfig/deno/tsconfig.json", 을 추가해서 사용할 수 있다. 자세한 내용은 깃헙 참고!
+  "extends": "./base.json",
   // "compileOnSave": true/false (default false)
   // 문서를 저장하면 compile 할래?!
   "compileOnSave": true,
