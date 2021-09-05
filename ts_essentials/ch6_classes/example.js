@@ -28,10 +28,23 @@ class Person {
     // age의 인자를 받을 수도 있고, 받지 않을 수도 있을 경우 ?를 사용 age의 타입가드를 설정해줘야한다.
     // name: string; this.name = name
     // 위 코드를 한줄로 간단하게 작성할 수 있다. (접근제어자를 설정해준다면! 한줄로 작성 가능)
-    constructor(name, age) {
-        this.name = name;
+    constructor(_name, age) {
+        this._name = _name;
         this.age = age;
+    }
+    // name이 동일하게 사용되는 충돌을 막아주기 위해 constructor의 name을 _name으로 변경해준다.
+    get name() {
+        // console.log("get");
+        return this._name + " Ko";
     }
 }
 const p1 = new Person("kkojae", 31);
 console.log(p1);
+// 함수처럼 사용하는게 아니라 프로퍼티 꺼내오는 것 처럼 사용한다는 것이 특징!
+// private한 프로퍼티의 값을 변경하고 불러와주는 getter와 setter
+// setter를 사용하지 않고 getter만 사용할 경우 읽기만 가능한 프로퍼티를 만들 수 있다.
+// get을 하는 함수 getter
+console.log(p1.name);
+// set을 하는 함수 setter
+// p1.name = "jaejeung";
+console.log(p1.name);
