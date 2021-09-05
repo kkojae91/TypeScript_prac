@@ -15,6 +15,7 @@ ClassName.instance = null;
 // constructor를 private으로 설정하면 new 키워드를 사용할 수 없다.
 // const aClass = new ClassName();
 // const bClass = new ClassName();
+// 2개의 object는 동일한 object이다.
 const aClass = ClassName.getInstance();
 const bClass = ClassName.getInstance();
 console.log(aClass);
