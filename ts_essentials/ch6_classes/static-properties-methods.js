@@ -15,6 +15,7 @@ Person7.CITY = "seoul";
 const p7 = new Person7();
 const p77 = new Person7();
 p7.hello();
+// static CITY는 공유되고 있는 프로퍼티이기 때문에, p7에서 값을 변경할 경우 p77의 값 역시 변경되어 있습니다!
 p7.change();
 p7.hello();
 p77.hello();
